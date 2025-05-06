@@ -7,13 +7,13 @@ export const environment = {
 
   //Parte 1
   firebaseConfig: {
-    apiKey: "AIzaSyBaNT-nqpmlj8nL5SVnsJ8OTUHzlvGWjnk",
-    authDomain: "appmovil2025-fdf54.firebaseapp.com",
-    projectId: "appmovil2025-fdf54",
-    storageBucket: "appmovil2025-fdf54.firebasestorage.app",
-    messagingSenderId: "194224129057",
-    appId: "1:194224129057:web:103eaa0f666c2de2844f60",
-    measurementId: "G-73N8MX2BHH"
+    apiKey: "AIzaSyByQgiCUzf3gYfFYcw4Pl7Rec-yRFjSIZA",
+    authDomain: "a-e2689.firebaseapp.com",
+    projectId: "a-e2689",
+    storageBucket: "a-e2689.firebasestorage.app",
+    messagingSenderId: "941773529283",
+    appId: "1:941773529283:web:8a9199b937e0fe88a88276",
+    measurementId: "G-PB8QCM0HKG"
   }
 
 };

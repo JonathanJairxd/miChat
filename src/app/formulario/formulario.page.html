@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-input label="Nombre" [(ngModel)]="formData.nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Apellido" [(ngModel)]="formData.apellido" name="apellido" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Correo" type="email" [(ngModel)]="formData.email" name="email" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <p>Fecha de nacimiento: </p>
+      <ion-datetime placeholder="Fecha de nacimiento" [(ngModel)]="formData.fechaNacimiento" name="fechaNacimiento"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-select placeholder="Género" [(ngModel)]="formData.genero" name="genero">
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Femenino">Femenino</ion-select-option>
+        <ion-select-option value="Otro">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Intereses</ion-label>
+      <ion-select [(ngModel)]="formData.intereses" name="intereses" multiple="true">
+        <ion-select-option *ngFor="let interest of interesesOptions" [value]="interest">
+          {{ interest }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-textarea placeholder="Comentario" [(ngModel)]="formData.comentario" name="comentario"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox slot="start" [(ngModel)]="formData.acepta" name="acepta"></ion-checkbox>
+      <ion-label>Acepto los términos</ion-label>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">Enviar</ion-button>
+  </form>
+</ion-content>
